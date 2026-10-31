@@ -1,27 +1,26 @@
 <?php
 
+declare(strict_types=1);
+
 namespace controller;
 
-
-use mvcsystem\baseclasses\Controller;
-use mvcsystem\RequestDirector;
+use mvcsystem\Controller;
+use mvcsystem\Response;
 
 class HomeController extends Controller
 {
-    public function __construct(RequestDirector $requestDirector)
+    public function index(): Response
     {
-        parent::__construct($requestDirector);
+        return $this->view();
     }
 
-    public function index(){
-        $this->returnView();
+    public function features(): Response
+    {
+        return $this->view();
     }
 
-    public function features(){
-        $this->returnView();
-    }
-
-    public function docs(){
-        $this->returnView();
+    public function docs(): Response
+    {
+        return $this->view();
     }
 }
